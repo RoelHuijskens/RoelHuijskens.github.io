@@ -1,0 +1,15 @@
+<html>
+<body>
+
+<div class="flex-container">
+<div id="right_item" style="margin:0rem 5rem 0rem 5rem">
+    
+</div> 
+    <img src="/RoelHuijskens/assets/images/Tetris_screenshot.png" style="margin:0rem 10rem 0rem 0rem" id="left_item">
+
+
+
+    </div>
+
+</body>
+</html>

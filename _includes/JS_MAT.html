@@ -1,0 +1,811 @@
+
+
+<html>
+<body>
+
+    <div style="padding:0rem 5rem 0rem 5rem">
+
+        <h2 style="text-align:center">Javascript</h2>
+        <br>
+        <p style="text-align:center"><i>This page is meant to experiment with javascript and to record relevant java syntax.</i></p>
+        <hr style="width:95%">
+        <br>
+        <br>
+
+        <h3>Hello world</h3>
+        <p> First of all in order to make any java script syntaxx work use the (script)(/script) tag. </p>
+
+        To write a hello world program use console.log("hello world")
+
+        The result of this cannot be seen on screen imediately but the javascript console can be easily found using ctrl + shift + j
+
+        <script>console.log("hello world")</script>
+
+        <br>
+        <br>
+        <h3>commenting javascript</h3>
+        <hr>
+        <br>
+
+        /*
+        This will easily create multi line comments in your program       <br>
+        */
+        var number = 5; //this will create an in-line comment using 2 backslashech       <br>
+
+        <br>
+        <br>
+        <h3>Data types</h3>
+        <hr>
+        <br>
+        <p>
+            undefined : undefined       <br>
+            null : nothing       <br>
+            boolean : boolean       <br>
+            string : string       <br>
+            symbol : any value that is unique       <br>
+            number : number       <br>
+            object: stores key value pairs.       <br>
+        </p>
+
+        To declare a variable we can do:      <br>
+
+        var fav_coffe = "ice_coffee";       <br>
+
+        fav_coffee = "hot cofee"       <br>
+
+        you can store anything in there.       <br>
+        also just as in c++ we have       <br>
+
+        const pi = 3.14 ;      <br>
+
+        this will be unchangeable       <br>
+
+        let my_age = 21   ;    <br>
+
+        this will only be declared withing this specific scope.        <br>
+
+        <br>
+        <br>
+        <h3>assigning variabless</h3>
+        <hr>
+        <br>
+        <p>
+            This will declare a variable <br>
+            var a; <br>
+            For assigneing values we do <br>
+
+            var b = 2; <br>
+
+            or after it is declared <br>
+
+            a = 7; <br>
+            b = a; <br>
+
+            to print we can do console .log <br>
+
+            for string concatiination <br>
+
+            var answer = "halle"; <br>
+            var deca = asnwer + "luja"; <br>
+        </p>
+
+        <script>
+            var a = 3;
+            var b;
+
+            b = a;
+            console.log(b);
+
+
+
+        </script>
+
+        <br>
+        sidebar to increment a number in java script we do <br>
+
+        var myVar = 87; <br>
+
+        myVar ++; <br>
+
+        console.log(myVar) //will give you 88 <br>
+
+        or for some amount differnt than one <br>
+
+        myVar += 9; // this will add 9 to that variable <br>
+
+        myVar -- ; <br>
+
+
+        <br>
+        <br>
+        <h3>string things</h3>
+        <hr>
+        <br>
+        <p>
+            To find the lenght of a string it is simply <br>
+            var wait_for_it = "neilpatrickharris"; <br>
+
+            console.log(wait_for_it.length) <br>
+
+
+        </p>
+
+        <script>
+            var wait_for_it = "neilpatrickharris";
+
+            console.log(wait_for_it.length)
+        </script>
+
+        <br>
+
+        <p>
+            to grap something from an iterable we use brackets just as in python and r. <br>
+
+            it is zero indeed so <br>
+
+            console.log(wait_for_it[0]) <br>
+
+            prints(n) <br>
+        </p>
+        <script>
+            console.log(wait_for_it[0])
+        </script>
+
+
+        <br>
+        <br>
+        To find the last element in an iterable we do<br>
+
+        console.log(wait_for_it[wait_for_it.length-1]) // not very optimal but okay.
+        <br>
+
+
+        <br>
+        <br>
+        <h3>First function look</h3>
+        <hr>
+        <br>
+        Very simple, a intersection between r and python.
+
+        <br>
+        <br>
+
+
+        function wordBlanks (myNoun, myAdjective, myVerb, myAdverb){<br>
+        var result = "";<br>
+        result +=  "The " + myAdjective + myNoun + myVerb + " to " + myAdverb;<br>
+
+        return result;<br>
+
+        }<br>
+        console.log(wordBlanks("CEO","great","race", "anxtiously"))<br>
+
+        <script>
+            function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+                var result = "";
+                result += "The " + myAdjective + " " + myNoun + " " + myVerb + " to " + myAdverb;
+
+                return result;
+
+            }
+            console.log(wordBlanks("CEO", "great", "race", "anxtiously"))
+        </script>
+
+
+        <br>
+        <br>
+        <h3>Arrays</h3>
+        <hr>
+        <br>
+
+        var anArray = ["word", 42]; // elements can be any data type such as an list in python. <br>
+        <br>
+        /*
+        Can also be nested
+        */<br>
+        <br>
+        var NestedArray = [["One", 2], ["Two", 1]];<br>
+        <br>
+        to access things<br>
+        <br>
+        NestedArray[0]<br>
+        <br>
+        will access ["one,2"]<br>
+
+        <br>
+        is mutable hence we can simply assign different values to stuff<br>
+
+        anArray[1] = 41;<br>
+
+        accessing a nested array is simply<br>
+
+        console.log(NestedArray[1][0])<br>
+        r
+
+        will print out "Two"<br>
+
+
+        <br>
+        <br>
+        <h3>Append Arrays</h3>
+        <hr>
+        <br>
+
+        var notherArray = [0,2,3,4,5,65];<br>
+        notherArray.push([2,4]) // this will append 2 and 4 to the current array<br>
+        notherArray.pop()//will remove the final item.<br>
+        var stored_removed = notherArray.shift(); //removes the first element and puts it in the stored_removed variable.<br>
+        notherArray.unshift(5)// adds an element to the beginning to the string. <br>
+
+
+        <script>
+            var notherArray = [0, 2, 3, 4, 5, 65];
+            notherArray.push(2); // this will append 2 and 4 to the current array
+            console.log(notherArray);
+
+            var gotit = notherArray.pop();//will grap the final item
+            console.log(gotit);;
+
+            notherArray.shift();
+            notherArray.unshift("suprise");
+            console.log(notherArray)
+
+
+        </script>
+
+
+
+        <br>
+        <br>
+        <h3>Real function settings</h3>
+        <hr>
+        <br>
+        function printSomething(){<br>
+        console.log("print yo")<br>
+        }<br>
+
+        printSomething()//will result in pring yo<br>
+
+
+        to add arugments just fill stuff into the () <br>
+
+        <script>
+            function printSomething() {
+                console.log("print yo")
+            }
+
+            printSomething()//will result in pring yo<br>
+        </script>
+
+        <br>
+        <br>
+        To return values from a function obsioulsy<br>
+
+        function minsSeven(num) {<br>
+        return num - 7;<br>
+        }<br>
+
+        var hold = minsSeven(8) + 2;<br>
+
+        console.log(hold) // returns 3;<br>
+
+        <script>
+            function minsSeven(num) {
+                return num - 7;
+            }
+
+            var hold = minsSeven(8) + 2;
+
+            console.log(hold) // returns 3;
+        </script>
+
+
+
+        <br>
+        <br>
+        <h3>If statements</h3>
+        <hr>
+        <br>
+
+        var meaning  = true;<br>
+
+        if (meaning) {<br>
+        console.log("it was true")<br>
+        } else {<br>
+        console.log("it was not true")<br>
+        }<br>
+
+
+        <br>
+        <br>
+
+        Nice thing to know ist that<br>
+        3 == 3 //is true<br>
+        3 == "3"// is also true<br>
+
+        <br>
+        this below here is called the strict equality operator<br>
+
+        3 === 3 //is true <br>
+        3 === "3"//is false <br>
+        <br>
+        nice for comparing user imput to a value using ==. <br>
+
+
+
+        <br>
+        3!=="2" / does the same ting
+
+
+        <br>
+        <br>
+        <h3>Switch statments</h3>
+        <hr>
+        <br>
+
+        for the case if we essentially need to have a chained if else statment format <br>
+
+        <br>
+        function CaseInSwitch(val){ <br>
+        var answer = ""; <br>
+        <br>
+        switch(val) { <br>
+        case 1: <br>
+        answer = "alpha" <br>
+        break; <br>
+        case 2: <br>
+        answer = "beta"; <br>
+        break; <br>
+        case 3: <br>
+        answer = "gamma"; <br>
+        break; <br>
+        case 4: <br>
+        answer = "delta"; <br>
+        break; <br>
+        default:
+        answer = "tangowango"<br>
+        break;<br>
+        } <br>
+        return answer ; <br>
+        } <br>
+
+        <br>
+        each case with a number evaluates case === number <br>
+        if none of them pass the default is used. if we do not use the breaks it will evalue all cases regardless <br>
+        whether one evalutes to true.<br>
+        Let's do an example as follows: <br>
+
+        <script>
+            function CaseInSwitch(val) {
+
+                var answer = "";
+                switch (val) {
+                    case 1:
+                        answer = "alpha"
+                        break;
+                    case 2:
+                        answer = "beta";
+                        break;
+                    case 3:
+                        answer = "gamma";
+                        break;
+                    case 4:
+                        answer = "delta";
+                        break;
+                    default: answer = "tangowango"
+                        break;
+                }
+                return answer;
+
+
+            }
+            console.log("Result CaseInSwitch(3): " + CaseInSwitch(3))
+            console.log("Result CaseInSwitch(2): " + CaseInSwitch(1))
+            console.log("Result CaseInSwitch('lassie'): " + CaseInSwitch("lassie"))
+
+        </script>
+        <br>
+        <br>
+        What we can also do<br>
+        <br>
+        switch(val) {<br>
+        case 1:<br>
+        case 2:<br>
+        answer = "correct"; <br>
+        break;<br>
+        case 3:<br>
+        case 4:<br>
+        answer = "correcterder"<br>
+        <br>
+        This will return correct if either case 1 or 2 is correct or correcterder if 3 or 4 are correct.
+
+
+        }
+
+        <br>
+        <br>
+        <h3>Objectss</h3>
+        <hr>
+        <br>
+
+        Objects are just dictionairies<br>
+        <br>
+        var a_dog = {<br>
+        "name": "abel",<br>
+        "legs": 4,<br>
+        "tails":1,<br>
+        "friends":["everything"]<br>
+        };<br>
+
+        Where instead of keys they are called properties.<br>
+        <br>
+        To access prooperties in the object above what we can do is<br>
+        <br>
+        var the_name = a_dog.name;// just as with an class objectin python<br>
+        <br>
+        or we can use bracketn notation. <br>
+
+        var taily = a_dog["tails"];<br>
+        <br>
+        to check whter a given propertie is in an object. <br>
+        a_dog.hasOwnPropertie(propertie_name)
+
+
+        <script>
+            var a_dog = {
+                "name": "abel",
+                "legs": 4,
+                "tails": 1,
+                "friends": ["everything"]
+            };
+            var the_name = a_dog.name;
+            var taily = a_dog["tails"];
+            console.log("The dogs name: " + [the_name, taily])
+
+        </script>
+        <br>
+        <br>
+        To check wehter or not a specific property is present in an object we can use the followin method on the object:<br>
+        <br>
+        a_dog.hasOwnProperty("legs")<br>
+        <br>
+
+        This will return a boolean value indicating wether or not the property is persent in the object.<br>
+        <br>
+        <br>
+        <br>
+
+        The awesome thing about objects is that it may allow you to actually store it or store within it different arrays.<br>
+        <br>
+        var my_Music = [<br>
+        {//create an object within a list<br>
+        "Artist":"Billy Joel",<br>
+        "Title":"Longest Time",<br>
+        "release_year":1970,<br>
+        "formats":["CD", "8T", "LP"], // store an array within an object.<br>
+        "gold": true<br>
+        }<br>
+        ,<br>
+        <br>
+        {<br>
+        "Artist": "Nena",<br>
+        "Title": "Irgendwo",<br>
+        "release_year": 1983,<br>
+        "formats": ["CD", "8T", "LP"],<br>
+        "gold": false<br>
+        }<br>
+        <br>
+        console.log("My second music piece: " + my_Music[1])<br>
+        console.log("MY first song: " + my_Music[0]["Title"])<br>
+
+
+        <script>
+            var my_Music = [
+                {
+                    "Artist": "Billy Joel",
+                    "Title": "Longest Time",
+                    "release_year": 1970,
+                    "formats": ["CD", "8T", "LP"],
+                    "groovy_level": {
+                        "Yes": ["for", "the", "longest", "time"],
+                        "No": ["still", "music", "left", "to", "write"]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            "gold": true
+                    }
+                    ,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        {
+                    "Artist": "Nena",
+                    "Title": "Irgendwo",
+                    "release_year": 1983,
+                    "formats": ["CD", "8T", "LP"],
+                    "groovy_level": "MEh"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            "gold": false
+                }
+            ]
+            console.log("My second music piece: " + my_Music[1])
+            console.log("MY first song: " + my_Music[0]["Title"])
+        </script>
+        <br>
+        <br>
+        Note that for nested objects we can use dot notation to access properties.:<br>
+        <br>
+
+
+
+        var my_Music = {<br>
+        "USA": {<br>
+        "Artist": "Billy Joel",<br>
+        "Title": "Longest Time",<br>
+        "release_year": 1970,<br>
+        "formats": ["CD", "8T", "LP"],<br>
+        "groovy_level": {<br>
+        "Yes": ["for", "the", "longest", "time"],<br>
+        "No": ["still", "music", "left", "to", "write"]<br>
+        },<br>
+        "gold": true<br>
+        }<br>
+        ,<br>
+        "Germany": {<br>
+        "Artist": "Nena",<br>
+        "Title": "Irgendwo",<br>
+        "release_year": 1983,<br>
+        "formats": ["CD", "8T", "LP"],<br>
+        "groovy_level": "MEh"<br>
+        "gold": false<br>
+        }<br>
+        }<br>
+
+        console.log("For the: " + my_Music.USA.groovy_level.Yes[2] + "time")<br>
+
+
+
+
+
+
+        <script>
+            var my_Music = {
+                "USA": {
+                    "Artist": "Billy Joel",
+                    "Title": "Longest Time",
+                    "release_year": 1970,
+                    "formats": ["CD", "8T", "LP"],
+                    "groovy_level": {
+                        "Yes": ["for", "the", "longest", "time"],
+                        "No": ["still", "music", "left", "to", "write"]
+
+                    },
+                    "gold": true
+                    ,
+                    "Germany": {
+                        "Artist": "Nena",
+                        "Title": "Irgendwo",
+                        "release_year": 1983,
+                        "formats": ["CD", "8T", "LP"],
+                        "groovy_level": "MEh",
+                        "gold": false
+                    }
+                }
+            }
+            console.log("For the: " + my_Music.USA.groovy_level.Yes[2] + " time")
+        </script>
+
+        <br>
+        <br>
+
+
+        Deleting a property from an object<br>
+        <br>
+        console.log(my_Music.USA)<br>
+        delete my_Music.USA.release_year<br>
+        console.log(my_Music.USA)<br>
+
+
+        <script>
+            console.log(my_Music.USA)
+            delete my_Music.USA.release_year
+            console.log(my_Music.USA)
+
+        </script>
+
+
+        <br>
+        <br>
+        <h3>While loops</h3>
+        <hr>
+        <br>
+        <br>
+        var myArray = []<br>
+        let i = 0;<br>
+        while (i < 5){<br>
+        myArray.push(i);<br>
+        console.log(i);<br>
+        i++; <br>
+        <br>
+        }<br>
+
+
+        <script>
+            var myArray = []
+            let i = 0;
+            while (i < 5) {
+                myArray.push(i);
+                console.log(i);
+                i++;
+
+            }
+            console.log("Result while loop aray: " + myArray)
+        </script>
+
+        <h3>For loops</h3>
+        <hr>
+        <br>
+        <br>
+        var myArray_2 = [] <br>
+        for(var i = 0; i < 5;i++){//first, initialize variable, next set condition, finally increment <br>
+        myArray_2.push(i) <br>
+        } <br>
+        console.log(myArray_2) <br>
+        <br>
+        <br>
+        Note that for the increment part at the final step of the for loop decleration we can simply do i += 2 which will increment by 2. <br>
+        You can even subtract from the variable for that matter by i -= 2<br>
+        <br>
+
+
+        <script>
+            var myArray_2 = []
+            for (var chi = 0; chi < 5; chi++) {//first, initialize variable, next set condition, finally increment
+                myArray_2.push(chi)
+            }
+            console.log("Result for loop: " + myArray_2)
+        </script>
+        <br>
+
+        <h3>random numbers</h3>
+        <hr>
+        <br>
+        <br>
+        function randomFraction(){<br>
+        return Math.random()// numbers between 0 and 1<br>
+        }<br>
+        <br>
+        Whole numbers <br>
+        function randomInt(){ <br>
+        return Math.floor(Math.random()*20) <br>
+        } <br>
+        <br>
+        funciton ourRandomRange(ourMin,ourMax){<br>
+        return Math.floor(Math.random()*(ourMAx-ourMin + 1))+ouMin;//creates a floating point number in the desired interval after adding the lowest allowable valu.<br>
+        }<br>
+        <br>
+
+        Note, it is usefull to note to go from "5" to 5 we du parseInt("5")<br>
+
+        <br>
+        <h3>Ternary operator</h3>
+        <hr>
+        <br>
+        <br>
+        This is an inline ifelse(x,condition_1,condition_2) thing, it works as:  a===b ? 7 : 10;<br>
+        Which in this case means that return 7 if a === b or 10 otherwise.  <br>
+        <br>
+        You can also chain these a===b ? 7 : b===c ? 10 : "Ai caramba";<br>
+        <br>
+        <h3>Differences var and let</h3>
+        <hr>
+        <br>
+        You are allowed more than 1 assignment to a var variable  <br>
+        <br>
+        var money = 100; <br>
+        var money = "fish"; <br>
+        <br>
+        This si not allowed with let, see terminal for result. <br>
+        <br>
+        let money = 100;<br>
+        let money = "fish";<br>
+
+
+
+        <script>
+            console.log("I'm assiging  the money twice with let")
+        </script>
+        <script>
+            let money = 100;
+            let money = "fish";
+        </script>
+        <br>
+        <br>
+
+        function checkScope(){ <br>
+        let i = "fucntion scope"; <br>
+        if (true){ <br>
+        let i = "blockscope" <br>
+        console.log("Block scope i is: ", i) <br>
+        } <br>
+        console.log("Function scope i is: ", i) <br>
+        return i; <br>
+        } <br>
+
+        <br>
+        Otherwise, also the let keyword defines objects within the local scope but var overides it everywere. <br>
+
+        <script>
+            function checkScope() {
+                let i = "fucntion scope";
+                if (true) {
+                    let i = "blockscope"
+                    console.log("Block scope i is: ", i)
+                }
+                console.log("Function scope i is: ", i)
+                return i;
+            }
+            checkScope()
+        </script>
+        <br>
+        And as stated above before, the const keyword will create an unchangeable variable <br>
+        Good coding practice is to only use const and let. <br>
+        <br>
+        Also the const objects will be allowed to changed just not in size.<br>
+        <br>
+        const THING = [1, 2, 3] <br>
+        console.log("Before constant change: " + THING) <br>
+        THING[1] = 10 <br>
+        console.log("After constant change: " + THING) <br>
+        THING.push(2) <br>
+        delete THING[2] <br>
+        console.log(THING) <br>
+        console.log("However we cant add a new variable to the variable name declared with const") <br>
+        THING = 5 <br>
+
+        <script>
+            const THING = [1, 2, 3]
+            console.log("Before constant change: " + THING)
+            THING[1] = 10
+            console.log("After constant change: " + THING)
+            THING.push(2)
+            delete THING[2]
+            console.log(THING)
+            console.log("However we cant add a new variable to the variable name declared with const")
+            THING = 5
+        </script>
+
+
+        <br>
+        <h3>Arrow functions (anonymous functions)</h3>
+        <hr>
+        <br>
+
+        For example 
+
+        var magic = function() {
+            return new Date();
+        };
+
+        This function does not have a name but it is assigned to magic. We can make this more concise as. 
+
+        var magic = () => new Date();
+
+        So the brackets and arrow specitfy a function and it will automatically return it
+
+        We can also create arrow functions with arguments such as recreating the next function. 
+
+        var myConcat = (arr1, arr2) => {
+            return arr1.concat(arr2)
+        };
+
+
+        We do this by.
+
+        var myConcat = (arr1,arr2) = arr1.concat(arr2);
+
+        console.log("Arrow function result: " + myConcat([1,2],[3,4,5]))
+
+        <script>
+            var myConcat = (arr1, arr2) => arr1.concat(arr2);
+            console.log("Arrow function result: " + myConcat([1, 2], [3, 4, 5]))
+        </script>
+
+
+
+    </div>
+</body>
+</html>
