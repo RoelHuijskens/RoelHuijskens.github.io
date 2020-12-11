@@ -509,16 +509,16 @@
                     "groovy_level": {
                         "Yes": ["for", "the", "longest", "time"],
                         "No": ["still", "music", "left", "to", "write"]
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            "gold": true
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "gold": true
                     }
                     ,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                {
                     "Artist": "Nena",
                     "Title": "Irgendwo",
                     "release_year": 1983,
                     "formats": ["CD", "8T", "LP"],
                     "groovy_level": "MEh"
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            "gold": false
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "gold": false
                 }
             ]
             console.log("My second music piece: " + my_Music[1])
@@ -768,33 +768,59 @@
             THING = 5
         </script>
 
+        <br>
+        <br>
+
+        That is to say that if we were to create an object with the const function it is mutable<br>
+        (e.g. a constant array will still allow for entries to be changed). if we were to make this.: <br>
+        <br>
+
+        const tadaa = [1,3,2]<br>
+        Object.freeze(tadaa)<br>
+        tadaa[1] = 2<br>
+        console.log( "This is tadaa now:" +  tadaa)<br>
+        <br>
+        <script>
+            const tadaa = [1, 3, 2];
+            Object.freeze(tadaa);
+            tadaa[1] = 2;
+            console.log("This is tadaa now:" + tadaa);
+        </script>
+
+        As seen the Object.freeze(tadaa) will make the tadaa object unchangeable.<br>
+
+
+
+
+
+
 
         <br>
         <h3>Arrow functions (anonymous functions)</h3>
         <hr>
         <br>
 
-        For example 
-
-        var magic = function() {
-            return new Date();
-        };
-
-        This function does not have a name but it is assigned to magic. We can make this more concise as. 
-
-        var magic = () => new Date();
-
-        So the brackets and arrow specitfy a function and it will automatically return it
-
-        We can also create arrow functions with arguments such as recreating the next function. 
-
-        var myConcat = (arr1, arr2) => {
-            return arr1.concat(arr2)
-        };
-
-
-        We do this by.
-
+        For example<br>
+        <br>
+        var magic = function() {<br>
+        return new Date();<br>
+        };<br>
+        <br>
+        This function does not have a name but it is assigned to magic. We can make this more concise as.<br>
+        <br>
+        var magic = () => new Date();<br>
+        <br>
+        So the brackets and arrow specitfy a function and it will automatically return it<br>
+        <br>
+        We can also create arrow functions with arguments such as recreating the next function.<br>
+        <br>
+        var myConcat = (arr1, arr2) => {<br>
+        return arr1.concat(arr2)<br>
+        };<br>
+        <br>
+        <br>
+        We do this by.<br>
+        <br>
         var myConcat = (arr1,arr2) = arr1.concat(arr2);
 
         console.log("Arrow function result: " + myConcat([1,2],[3,4,5]))
@@ -804,7 +830,44 @@
             console.log("Arrow function result: " + myConcat([1, 2], [3, 4, 5]))
         </script>
 
+        <br>
+        <br>
 
+        Using arrow functions is really usefull in conjuction with map and filter() which apply a function to a lsit. such as lapply or<br>
+        map() in python.<br>
+        <br>
+
+        Let's do an example: <br>
+
+        <script>
+            const realNumberArray = [5, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+            const squareList = arr => {
+                const squaredIntegers = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x ** 2);
+                return squaredIntegers;
+            }
+
+            const squaredIntegers = squareList(realNumberArray);
+            console.log("Result of the squared integers: " + squaredIntegers);
+
+        </script>
+        <br>
+        const realNumberArray = [5, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];<br>
+        const squareList = arr => {<br>
+        const squaredIntegers = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x**2);<br>
+        return squaredIntegers;<br>
+        }<br>
+        <br>
+        // Note the cool part on the array above, in one line we can both filter the array and apply the transformation function on it. <br>
+        <br>
+        const squaredIntegers = squareList(realNumberArray);<br>
+        console.log("Result of the squared integers: " + squaredIntegers);<br>
+
+
+
+        <h3>Default values/ .reduce and indefinte number of arguments. </h3>
+        <hr>
+        <br>
+        <br>
 
     </div>
 </body>
